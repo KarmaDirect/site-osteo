@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGPD - Cabinet d'Ostéopathie</title>
+    <meta name="description" content="Informations RGPD du cabinet d'ostéopathie">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #4A7C59;
+            --secondary-color: #87CEEB;
+            --accent-color: #F0F8FF;
+            --text-dark: #2C3E50;
+            --text-light: #6C757D;
+            --white: #FFFFFF;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --border-radius: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            padding: 1rem 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .back-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Content */
+        .content {
+            padding: 3rem 0;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        h2 {
+            color: var(--text-dark);
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem 0;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            color: var(--text-dark);
+            font-size: 1.2rem;
+            margin: 1.5rem 0 0.5rem 0;
+        }
+
+        p, ul, ol {
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+
+        ul, ol {
+            margin-left: 2rem;
+        }
+
+        .highlight {
+            background: var(--accent-color);
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--primary-color);
+            margin: 1rem 0;
+        }
+
+        .contact-info {
+            background: var(--accent-color);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin: 2rem 0;
+        }
+
+        .contact-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .rights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .right-card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .right-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-content a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .footer-content a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-bone"></i> Cabinet Ostéo
+            </a>
+            <a href="index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Retour au site
+            </a>
+        </nav>
+    </header>
+
+    <!-- Content -->
+    <div class="content">
+        <div class="container">
+            <h1>Règlement Général sur la Protection des Données (RGPD)</h1>
+
+            <div class="highlight">
+                <p><strong>Dernière mise à jour :</strong> Janvier 2024</p>
+                <p>Cette page vous informe de vos droits et de nos obligations en matière de protection des données personnelles, conformément au RGPD.</p>
+            </div>
+
+            <h2>Qu'est-ce que le RGPD ?</h2>
+            <p>Le Règlement Général sur la Protection des Données (RGPD) est un règlement européen qui renforce et unifie la protection des données personnelles des citoyens de l'Union Européenne. Il s'applique à toutes les organisations qui traitent des données personnelles.</p>
+
+            <h2>Nos engagements</h2>
+            <p>En tant que cabinet d'ostéopathie, nous nous engageons à :</p>
+            <ul>
+                <li>Traiter vos données de manière licite, loyale et transparente</li>
+                <li>Collecter vos données uniquement pour des finalités déterminées et légitimes</li>
+                <li>Limiter la collecte aux données strictement nécessaires</li>
+                <li>Assurer l'exactitude et la mise à jour de vos données</li>
+                <li>Conserver vos données pendant une durée limitée</li>
+                <li>Garantir la sécurité et la confidentialité de vos données</li>
+            </ul>
+
+            <h2>Vos droits RGPD</h2>
+            <div class="rights-grid">
+                <div class="right-card">
+                    <h4><i class="fas fa-eye"></i> Droit d'accès</h4>
+                    <p>Vous pouvez demander à connaître les données que nous détenons sur vous et comment elles sont utilisées.</p>
+                </div>
+                <div class="right-card">
+                    <h4><i class="fas fa-edit"></i> Droit de rectification</h4>
+                    <p>Vous pouvez demander la correction de vos données si elles sont inexactes ou incomplètes.</p>
+                </div>
+                <div class="right-card">
+                    <h4><i class="fas fa-trash"></i> Droit à l'effacement</h4>
+                    <p>Vous pouvez demander la suppression de vos données dans certaines conditions.</p>
+                </div>
+                <div class="right-card">
+                    <h4><i class="fas fa-download"></i> Droit à la portabilité</h4>
+                    <p>Vous pouvez récupérer vos données dans un format structuré et réutilisable.</p>
+                </div>
+                <div class="right-card">
+                    <h4><i class="fas fa-ban"></i> Droit d'opposition</h4>
+                    <p>Vous pouvez vous opposer au traitement de vos données dans certaines situations.</p>
+                </div>
+                <div class="right-card">
+                    <h4><i class="fas fa-pause"></i> Droit de limitation</h4>
+                    <p>Vous pouvez demander la limitation du traitement de vos données.</p>
+                </div>
+            </div>
+
+            <h2>Comment exercer vos droits ?</h2>
+            <p>Pour exercer vos droits RGPD, vous pouvez nous contacter :</p>
+            <div class="contact-info">
+                <h3>Cabinet d'Ostéopathie</h3>
+                <p><strong>Par email :</strong> dpo@cabinet-osteo.fr<br>
+                <strong>Par téléphone :</strong> 01 23 45 67 89<br>
+                <strong>Par courrier :</strong> 123 Rue de la Santé, 75001 Paris</p>
+            </div>
+
+            <h2>Délais de réponse</h2>
+            <p>Nous nous engageons à répondre à votre demande dans un délai maximum de :</p>
+            <ul>
+                <li><strong>1 mois</strong> pour les demandes d'accès, de rectification, d'effacement, de portabilité et d'opposition</li>
+                <li><strong>3 mois</strong> pour les demandes complexes (nous vous informerons de ce délai)</li>
+            </ul>
+
+            <h2>Données médicales</h2>
+            <p>En tant que professionnel de santé, nous traitons également des données médicales sensibles. Ces données bénéficient d'une protection renforcée :</p>
+            <ul>
+                <li>Conservation obligatoire pendant 20 ans minimum</li>
+                <li>Accès strictement limité au personnel autorisé</li>
+                <li>Chiffrement des données électroniques</li>
+                <li>Partage uniquement avec les professionnels de santé impliqués dans votre prise en charge</li>
+            </ul>
+
+            <h2>Cookies et traceurs</h2>
+            <p>Notre site utilise des cookies pour améliorer votre expérience :</p>
+            <ul>
+                <li><strong>Cookies techniques :</strong> Nécessaires au fonctionnement du site</li>
+                <li><strong>Cookies analytiques :</strong> Pour analyser l'utilisation du site</li>
+                <li><strong>Cookies de préférences :</strong> Pour mémoriser vos choix</li>
+            </ul>
+            <p>Vous pouvez gérer vos préférences cookies via la bannière qui apparaît sur notre site.</p>
+
+            <h2>Transferts de données</h2>
+            <p>Vos données ne sont pas transférées en dehors de l'Union Européenne. Tous nos prestataires sont basés en Europe et respectent le RGPD.</p>
+
+            <h2>Sécurité des données</h2>
+            <p>Nous mettons en œuvre des mesures de sécurité appropriées :</p>
+            <ul>
+                <li>Chiffrement SSL/TLS pour les données en transit</li>
+                <li>Chiffrement des données sensibles au repos</li>
+                <li>Accès restreint et authentifié</li>
+                <li>Sauvegardes sécurisées</li>
+                <li>Formation du personnel à la protection des données</li>
+            </ul>
+
+            <h2>Violation de données</h2>
+            <p>En cas de violation de données personnelles, nous nous engageons à :</p>
+            <ul>
+                <li>Notifier la CNIL dans les 72 heures</li>
+                <li>Vous informer si la violation présente un risque pour vos droits et libertés</li>
+                <li>Documenter toutes les violations et les mesures prises</li>
+            </ul>
+
+            <h2>Contact Délégué à la Protection des Données</h2>
+            <p>Pour toute question concernant la protection de vos données :</p>
+            <div class="contact-info">
+                <h3>Délégué à la Protection des Données</h3>
+                <p><strong>Email :</strong> dpo@cabinet-osteo.fr<br>
+                <strong>Adresse :</strong> 123 Rue de la Santé, 75001 Paris<br>
+                <strong>Réponse garantie sous 48h</strong></p>
+            </div>
+
+            <h2>Autorité de contrôle</h2>
+            <p>Vous avez le droit de déposer une réclamation auprès de la CNIL :</p>
+            <div class="contact-info">
+                <h3>Commission Nationale de l'Informatique et des Libertés</h3>
+                <p><strong>Adresse :</strong> 3 Place de Fontenoy, 75007 Paris<br>
+                <strong>Site web :</strong> www.cnil.fr<br>
+                <strong>Téléphone :</strong> 01 53 73 22 22</p>
+            </div>
+
+            <div class="highlight">
+                <p><strong>Note importante :</strong> Cette page est régulièrement mise à jour pour refléter les évolutions légales et nos pratiques. Nous vous informerons de tout changement significatif.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Cabinet d'Ostéopathie. Tous droits réservés.</p>
+            <p>
+                <a href="mentions-legales.html">Mentions légales</a> | 
+                <a href="politique-confidentialite.html">Politique de confidentialité</a> | 
+                <a href="rgpd.html">RGPD</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html> 

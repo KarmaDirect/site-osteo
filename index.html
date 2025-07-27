@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabinet d'Ostéopathie - Retrouvez votre bien-être naturellement</title>
+    <meta name="description" content="Ostéopathe à l'écoute pour soulager vos douleurs durablement. Prise de rendez-vous en ligne. Cabinet moderne et professionnel.">
+    <meta name="keywords" content="ostéopathe, ostéopathie, douleurs, bien-être, cabinet, rendez-vous">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦴</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- GoHighLevel Tracking Script -->
+    <script async src="https://cdn.gohighlevel.com/widgets.js"></script>
+    <script>
+        // GoHighLevel Tracking
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-XXXXXXX');
+        
+        // GHL Event Tracking
+        window.addEventListener('load', function() {
+            // Track page views
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'page_view', {
+                    page_title: document.title,
+                    page_location: window.location.href
+                });
+            }
+            
+            // Track form interactions
+            const ghlForms = document.querySelectorAll('iframe[src*="gohighlevel"], iframe[src*="webstate.pro"]');
+            ghlForms.forEach(form => {
+                form.addEventListener('load', function() {
+                    console.log('GHL Form loaded successfully');
+                });
+            });
+        });
+    </script>
+    
+    <style>
+        :root {
+            --primary-color: #4A7C59;
+            --secondary-color: #87CEEB;
+            --accent-color: #F0F8FF;
+            --text-dark: #2C3E50;
+            --text-light: #6C757D;
+            --white: #FFFFFF;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --border-radius: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .cta-button {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background: #3A5F47;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--accent-color) 0%, var(--white) 100%);
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="%234A7C59" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-width: 400px;
+            height: 300px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            border-radius: var(--border-radius);
+            margin: 2rem auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 4rem;
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            color: var(--text-dark);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            margin-bottom: 4rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Cabinet Presentation */
+        .cabinet-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .info-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .info-card i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: var(--accent-color);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .stars {
+            color: #FFD700;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 6rem;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .price {
+            font-weight: 600;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+
+        /* Appointment Section */
+        .appointment {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #3A5F47 100%);
+            color: var(--white);
+        }
+
+        .appointment-content {
+            text-align: center;
+        }
+
+        .appointment h2 {
+            color: var(--white);
+        }
+
+        .appointment-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .info-item {
+            text-align: center;
+        }
+
+        .info-item i {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .map-container {
+            margin-top: 3rem;
+            height: 300px;
+            background: var(--accent-color);
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-dark);
+        }
+
+        /* Contact Form */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #E9ECEF;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #BDC3C7;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .footer-section a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #34495E;
+            color: #BDC3C7;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+
+        /* GDPR Banner */
+        .gdpr-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 1rem;
+            text-align: center;
+            z-index: 1001;
+        }
+
+        .gdpr-banner button {
+            background: var(--primary-color);
+            color: var(--white);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: var(--border-radius);
+            margin-left: 1rem;
+            cursor: pointer;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            background: var(--white);
+            margin-bottom: 1rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            background: var(--accent-color);
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            padding: 1.5rem;
+            display: none;
+        }
+
+        .faq-answer.active {
+            display: block;
+        }
+
+        /* Calendar iframe styling */
+        .calendar-container {
+            position: relative;
+            margin: 2rem 0;
+            padding: 1rem;
+            background: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .calendar-container iframe {
+            border-radius: var(--border-radius);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            border: none;
+            background: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .calendar-container iframe:hover {
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+            transform: translateY(-2px);
+        }
+
+        /* Responsive calendar */
+        @media (max-width: 768px) {
+            .calendar-container iframe {
+                height: 600px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- GDPR Banner -->
+    <div class="gdpr-banner" id="gdprBanner">
+        <span>Ce site utilise des cookies pour améliorer votre expérience. En continuant à naviguer, vous acceptez notre utilisation des cookies.</span>
+        <button onclick="acceptCookies()">Accepter</button>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <i class="fas fa-bone"></i> Cabinet Ostéo
+            </div>
+            <ul class="nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#a-propos">À propos</a></li>
+                <li><a href="#prestations">Prestations</a></li>
+                <li><a href="#rdv">Rendez-vous</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <a href="https://links.webstate.pro/widget/bookings/consultation-osteo?locale=fr" target="_blank" class="cta-button" data-ghl-event="calendar_click" data-ghl-source="header">Prendre RDV</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Retrouvez votre bien-être naturellement avec un ostéopathe à l'écoute</h1>
+                <p>Soulagez vos douleurs durablement grâce à une approche douce et personnalisée. Prenez rendez-vous avec votre ostéopathe dès aujourd'hui.</p>
+                <a href="https://links.webstate.pro/widget/bookings/consultation-osteo?locale=fr" target="_blank" class="cta-button" data-ghl-event="calendar_click" data-ghl-source="hero">Prendre rendez-vous</a>
+                <div class="hero-image">
+                    <i class="fas fa-user-md"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cabinet Presentation -->
+    <section class="container">
+        <h2 class="section-title">Notre Cabinet</h2>
+        <p class="section-subtitle">Un environnement moderne et apaisant pour votre bien-être</p>
+        <div class="cabinet-info">
+            <div class="info-card">
+                <i class="fas fa-clock"></i>
+                <h3>Horaires flexibles</h3>
+                <p>Consultations du lundi au samedi, de 8h à 19h</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Accès facile</h3>
+                <p>Cabinet situé en centre-ville avec parking gratuit</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Sécurité sanitaire</h3>
+                <p>Protocoles d'hygiène stricts et équipements modernes</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Témoignages clients</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Après des mois de douleurs lombaires, une seule séance a suffi pour me soulager. L'ostéopathe est très professionnel et à l'écoute."</p>
+                    <p class="testimonial-author">- Marie L., 35 ans</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Excellent praticien pour mes problèmes de cervicales. Approche douce et efficace. Je recommande vivement !"</p>
+                    <p class="testimonial-author">- Pierre D., 42 ans</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Grâce à l'ostéopathie, j'ai pu reprendre le sport sans douleur. Le suivi est personnalisé et les résultats sont durables."</p>
+                    <p class="testimonial-author">- Sophie M., 28 ans</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="a-propos" class="container">
+        <h2 class="section-title">À propos</h2>
+        <div class="about-content">
+            <div class="about-image">
+                <i class="fas fa-user-md"></i>
+            </div>
+            <div class="about-text">
+                <h3>Dr. Thomas Martin</h3>
+                <p>Ostéopathe diplômé depuis 2015, je me suis spécialisé dans le traitement des douleurs musculo-squelettiques et des troubles fonctionnels. Mon approche est basée sur l'écoute et la compréhension globale de chaque patient.</p>
+                <p>Formé aux techniques les plus récentes, je combine l'ostéopathie structurelle, viscérale et crânienne pour offrir des soins adaptés à chaque situation.</p>
+                <p>Ma passion pour l'ostéopathie vient de la satisfaction de voir mes patients retrouver leur mobilité et leur bien-être. Chaque personne est unique, c'est pourquoi j'adapte mes techniques à chaque cas.</p>
+                <h4>Spécialités :</h4>
+                <ul>
+                    <li>Douleurs lombaires et cervicales</li>
+                    <li>Troubles digestifs</li>
+                    <li>Accompagnement sportif</li>
+                    <li>Femmes enceintes et nourrissons</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="prestations" class="container">
+        <h2 class="section-title">Nos Prestations</h2>
+        <p class="section-subtitle">Des soins adaptés à vos besoins</p>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-backbone"></i>
+                <h3>Douleurs lombaires</h3>
+                <p>Traitement des lombalgies, sciatiques et hernies discales par des techniques douces et efficaces.</p>
+                <p class="price">60€</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-head-side"></i>
+                <h3>Douleurs cervicales</h3>
+                <p>Soulagement des cervicalgies, torticolis et maux de tête d'origine mécanique.</p>
+                <p class="price">60€</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-stomach"></i>
+                <h3>Troubles digestifs</h3>
+                <p>Amélioration des problèmes digestifs, reflux et ballonnements par l'ostéopathie viscérale.</p>
+                <p class="price">60€</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-running"></i>
+                <h3>Accompagnement sportif</h3>
+                <p>Prévention et traitement des blessures sportives, amélioration des performances.</p>
+                <p class="price">60€</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-baby"></i>
+                <h3>Femmes enceintes</h3>
+                <p>Accompagnement pendant la grossesse, préparation à l'accouchement et suivi post-partum.</p>
+                <p class="price">60€</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-child"></i>
+                <h3>Nourrissons</h3>
+                <p>Traitement des troubles du sommeil, régurgitations et déformations crâniennes.</p>
+                <p class="price">50€</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Section -->
+    <section id="rdv" class="appointment">
+        <div class="container">
+            <div class="appointment-content">
+                <h2 class="section-title">Prendre Rendez-vous</h2>
+                <p class="section-subtitle">Réservez votre consultation en ligne en quelques clics</p>
+                
+                <div class="calendar-container" style="margin: 2rem 0;">
+                    <iframe 
+                        src="https://links.webstate.pro/widget/bookings/consultation-osteo?locale=fr" 
+                        width="100%" 
+                        height="700px" 
+                        frameborder="0" 
+                        style="border-radius: var(--border-radius); box-shadow: var(--shadow); border: none; background: var(--white);"
+                        data-ghl-event="calendar_embed" 
+                        data-ghl-source="appointment_section">
+                    </iframe>
+                </div>
+
+                <div class="appointment-info">
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <h3>Horaires</h3>
+                        <p>Lundi - Vendredi : 8h - 19h<br>Samedi : 8h - 17h</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Adresse</h3>
+                        <p>123 Rue de la Santé<br>75001 Paris</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <h3>Téléphone</h3>
+                        <p>01 23 45 67 89</p>
+                    </div>
+                </div>
+
+                <div class="map-container">
+                    <div style="text-align: center;">
+                        <i class="fas fa-map" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                        <p>Intégration Google Maps</p>
+                        <p>123 Rue de la Santé, 75001 Paris</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="container">
+        <h2 class="section-title">Questions Fréquentes</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>L'ostéopathie est-elle remboursée par la mutuelle ?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Oui, de nombreuses mutuelles remboursent les séances d'ostéopathie. Renseignez-vous auprès de votre mutuelle pour connaître les conditions de remboursement.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Combien de séances sont nécessaires ?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Le nombre de séances varie selon le problème et l'ancienneté des symptômes. En général, 2 à 3 séances suffisent pour un problème récent.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Y a-t-il des contre-indications ?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>L'ostéopathie est généralement sans danger. Cependant, certaines pathologies nécessitent des précautions. N'hésitez pas à me consulter pour plus d'informations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-subtitle">N'hésitez pas à nous contacter pour toute question</p>
+        
+        <div class="contact-form">
+            <iframe src="https://links.webstate.pro/widget/form/ek3eykCm9nw4MUr7h0EH" width="100%" height="600px" frameborder="0" style="border-radius: var(--border-radius); box-shadow: var(--shadow);"></iframe>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Cabinet d'Ostéopathie</h3>
+                    <p>123 Rue de la Santé<br>75001 Paris</p>
+                    <p>Tél : 01 23 45 67 89</p>
+                    <p>Email : contact@cabinet-osteo.fr</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Horaires</h3>
+                    <p>Lundi - Vendredi : 8h - 19h</p>
+                    <p>Samedi : 8h - 17h</p>
+                    <p>Dimanche : Fermé</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Liens utiles</h3>
+                    <a href="#accueil">Accueil</a>
+                    <a href="#a-propos">À propos</a>
+                    <a href="#prestations">Prestations</a>
+                    <a href="#rdv">Rendez-vous</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Informations</h3>
+                    <a href="mentions-legales.html">Mentions légales</a>
+                    <a href="politique-confidentialite.html">Politique de confidentialité</a>
+                    <a href="rgpd.html">RGPD</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Cabinet d'Ostéopathie. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // FAQ Toggle
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('i');
+            
+            if (answer.classList.contains('active')) {
+                answer.classList.remove('active');
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            } else {
+                answer.classList.add('active');
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            }
+        }
+
+        // GDPR Banner
+        function acceptCookies() {
+            document.getElementById('gdprBanner').style.display = 'none';
+            localStorage.setItem('cookiesAccepted', 'true');
+        }
+
+        // Check if cookies were already accepted
+        if (localStorage.getItem('cookiesAccepted')) {
+            document.getElementById('gdprBanner').style.display = 'none';
+        }
+
+        // GHL Integration - Form and Calendar are now handled by GHL widgets
+        console.log('GHL Calendar and Form integrated successfully');
+        
+        // Track GHL Calendar interactions (both links and iframe)
+        document.querySelectorAll('a[href*="consultation-osteo"]').forEach(link => {
+            link.addEventListener('click', function() {
+                const source = this.getAttribute('data-ghl-source') || 'unknown';
+                const eventType = this.getAttribute('data-ghl-event') || 'calendar_click';
+                
+                // Track calendar click event
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', eventType, {
+                        event_category: 'engagement',
+                        event_label: 'appointment_booking',
+                        source: source,
+                        calendar_url: this.href
+                    });
+                }
+                
+                // GHL specific tracking
+                if (typeof window.dataLayer !== 'undefined') {
+                    window.dataLayer.push({
+                        'event': 'ghl_calendar_click',
+                        'calendar_url': this.href,
+                        'source': source,
+                        'timestamp': new Date().toISOString()
+                    });
+                }
+                
+                // Log for debugging
+                console.log('GHL Calendar clicked:', {
+                    source: source,
+                    url: this.href,
+                    timestamp: new Date().toISOString()
+                });
+            });
+        });
+
+        // Track embedded calendar iframe
+        const calendarIframe = document.querySelector('iframe[src*="consultation-osteo"]');
+        if (calendarIframe) {
+            calendarIframe.addEventListener('load', function() {
+                console.log('GHL Calendar iframe loaded successfully');
+                
+                // Track iframe load
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'calendar_embed_load', {
+                        event_category: 'engagement',
+                        event_label: 'calendar_embedded',
+                        source: 'appointment_section'
+                    });
+                }
+            });
+
+            // Listen for messages from iframe (if GHL sends booking events)
+            window.addEventListener('message', function(event) {
+                if (event.origin.includes('webstate.pro') || event.origin.includes('gohighlevel')) {
+                    console.log('GHL Calendar event received:', event.data);
+                    
+                    // Track booking events
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'appointment_booked', {
+                            event_category: 'conversion',
+                            event_label: 'calendar_booking',
+                            source: 'embedded_calendar'
+                        });
+                    }
+                }
+            });
+        }
+        
+        // Track form submissions (if form is embedded)
+        const ghlForm = document.querySelector('iframe[src*="webstate.pro/widget/form"]');
+        if (ghlForm) {
+            // Listen for messages from iframe (if GHL sends them)
+            window.addEventListener('message', function(event) {
+                if (event.origin.includes('webstate.pro') || event.origin.includes('gohighlevel')) {
+                    console.log('GHL Form event received:', event.data);
+                    
+                    // Track form submission
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'form_submit', {
+                            event_category: 'lead_generation',
+                            event_label: 'contact_form'
+                        });
+                    }
+                }
+            });
+        }
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.background = 'var(--white)';
+                header.style.backdropFilter = 'none';
+            }
+        });
+
+        // Mobile menu toggle (if needed)
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+    </script>
+</body>
+</html>
