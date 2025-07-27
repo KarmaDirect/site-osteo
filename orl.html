@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mentions Légales - MediCare</title>
-    <meta name="description" content="Mentions légales du cabinet médical MediCare">
+    <title>ORL - MediCare</title>
+    <meta name="description" content="Service d'ORL - Diagnostic et traitement des maladies de l'oreille, du nez et de la gorge">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -113,34 +113,54 @@
             min-height: 100vh;
         }
 
-        .content-card {
-            background: var(--white);
+        .hero-section {
+            background: var(--gradient-primary);
+            color: var(--white);
             padding: 3rem;
             border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
+            text-align: center;
         }
 
-        .content-card h1 {
-            color: var(--primary-blue);
+        .hero-section h1 {
             font-size: 2.5rem;
             font-weight: 700;
-            margin-bottom: 2rem;
-            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .content-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
         }
 
         .content-card h2 {
             color: var(--primary-blue);
             font-size: 1.8rem;
             font-weight: 600;
-            margin: 2rem 0 1rem 0;
+            margin-bottom: 1.5rem;
         }
 
         .content-card h3 {
             color: var(--text-dark);
             font-size: 1.3rem;
             font-weight: 600;
-            margin: 1.5rem 0 0.5rem 0;
+            margin: 1.5rem 0 1rem 0;
         }
 
         .content-card p {
@@ -156,6 +176,43 @@
         .content-card li {
             margin-bottom: 0.5rem;
             color: var(--text-light);
+        }
+
+        .sidebar-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            height: fit-content;
+        }
+
+        .sidebar-card h3 {
+            color: var(--primary-blue);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-blue-hover);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
         }
 
         .btn-back {
@@ -176,6 +233,20 @@
             box-shadow: var(--shadow-hover);
         }
 
+        .highlight-box {
+            background: var(--light-bg);
+            border-left: 4px solid var(--primary-blue);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+
+        .highlight-box h4 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
         /* Footer */
         footer {
             background: var(--text-dark);
@@ -185,7 +256,7 @@
 
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             gap: 3rem;
             margin-bottom: 2rem;
         }
@@ -258,11 +329,16 @@
                 display: none;
             }
 
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
             .content-card {
                 padding: 2rem;
             }
 
-            .content-card h1 {
+            .hero-section h1 {
                 font-size: 2rem;
             }
 
@@ -297,45 +373,87 @@
                 <i class="fas fa-arrow-left"></i> Retour à l'accueil
             </a>
             
-            <div class="content-card">
-                <h1>Mentions Légales</h1>
-                
-                <h2>1. Éditeur du site</h2>
-                <p><strong>Raison sociale :</strong> MediCare</p>
-                <p><strong>Adresse :</strong> 123 Rue de la Santé, 75001 Paris, France</p>
-                <p><strong>Téléphone :</strong> +33 1 23 45 67 89</p>
-                <p><strong>Email :</strong> contact@medicare.fr</p>
-                <p><strong>Directeur de publication :</strong> Dr. Jean Dupont</p>
+            <div class="hero-section">
+                <h1><i class="fas fa-ear"></i> Service d'ORL</h1>
+                <p>Diagnostic et traitement des maladies de l'oreille, du nez et de la gorge avec une expertise médicale de pointe.</p>
+            </div>
 
-                <h2>2. Hébergement</h2>
-                <p>Ce site est hébergé par :</p>
-                <p><strong>Hébergeur :</strong> OVH SAS</p>
-                <p><strong>Adresse :</strong> 2 rue Kellermann, 59100 Roubaix, France</p>
-                <p><strong>Téléphone :</strong> 1007</p>
+            <div class="content-grid">
+                <div class="content-card">
+                    <h2>Notre Service d'ORL</h2>
+                    
+                    <p>Notre service d'Oto-Rhino-Laryngologie (ORL) offre une prise en charge complète des pathologies de l'oreille, du nez et de la gorge pour tous les âges.</p>
 
-                <h2>3. Propriété intellectuelle</h2>
-                <p>L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables et les représentations iconographiques et photographiques.</p>
-                
-                <p>La reproduction de tout ou partie de ce site sur un support électronique quel qu'il soit est formellement interdite sauf autorisation expresse du directeur de la publication.</p>
+                    <h3>Nos Spécialités</h3>
+                    <ul>
+                        <li><strong>Otologie :</strong> Diagnostic et traitement des maladies de l'oreille</li>
+                        <li><strong>Rhinologie :</strong> Pathologies du nez et des sinus</li>
+                        <li><strong>Laryngologie :</strong> Troubles de la voix et de la déglutition</li>
+                        <li><strong>Chirurgie cervico-faciale :</strong> Interventions chirurgicales de la tête et du cou</li>
+                        <li><strong>ORL pédiatrique :</strong> Prise en charge spécifique des enfants</li>
+                        <li><strong>Audiologie :</strong> Diagnostic et traitement des troubles auditifs</li>
+                    </ul>
 
-                <h2>4. Responsabilité</h2>
-                <p>Les informations contenues sur ce site sont aussi précises que possible et le site est périodiquement remis à jour, mais peut toutefois contenir des inexactitudes, des omissions ou des lacunes.</p>
-                
-                <p>Si vous constatez une lacune, erreur ou ce qui parait être un dysfonctionnement, merci de bien vouloir le signaler par email à l'adresse contact@medicare.fr, en décrivant le problème de la manière la plus précise possible.</p>
+                    <h3>Examens et Procédures</h3>
+                    <ul>
+                        <li><strong>Otoscopie :</strong> Examen du conduit auditif et du tympan</li>
+                        <li><strong>Fibroscopie nasale :</strong> Exploration des fosses nasales</li>
+                        <li><strong>Laryngoscopie :</strong> Examen du larynx et des cordes vocales</li>
+                        <li><strong>Audiométrie :</strong> Test d'audition complet</li>
+                        <li><strong>Vidéonystagmographie :</strong> Évaluation de l'équilibre</li>
+                        <li><strong>Endoscopie sinusale :</strong> Exploration des sinus</li>
+                    </ul>
 
-                <h2>5. Liens hypertextes</h2>
-                <p>Les liens hypertextes mis en place dans le cadre du présent site web en direction d'autres ressources présentes sur le réseau Internet ne sauraient engager la responsabilité de MediCare.</p>
+                    <div class="highlight-box">
+                        <h4><i class="fas fa-info-circle"></i> Information importante</h4>
+                        <p>L'ORL est une spécialité médicale et chirurgicale qui traite les pathologies de la sphère ORL. Notre équipe dispose d'équipements modernes pour un diagnostic précis et des traitements adaptés.</p>
+                    </div>
 
-                <h2>6. Cookies</h2>
-                <p>Le site peut-être amené à vous demander l'acceptation des cookies pour des besoins de statistiques et d'affichage. Un cookie ne nous permet pas de vous identifier ; il sert uniquement à enregistrer des informations relatives à la navigation de votre ordinateur sur notre site.</p>
+                    <h3>Pathologies Traitées</h3>
+                    <ul>
+                        <li><strong>Oreille :</strong> Otites, surdité, acouphènes, vertiges</li>
+                        <li><strong>Nez :</strong> Rhinite, sinusite, polypes nasaux, déviation de cloison</li>
+                        <li><strong>Gorge :</strong> Angines, pharyngite, amygdalite, apnées du sommeil</li>
+                        <li><strong>Voix :</strong> Dysphonie, nodules vocaux, paralysie laryngée</li>
+                        <li><strong>Tête et cou :</strong> Tumeurs, kystes, abcès</li>
+                    </ul>
 
-                <h2>7. Droit applicable</h2>
-                <p>Tout litige en relation avec l'utilisation du site medicare.fr est soumis au droit français. En dehors des cas où la loi ne le permet pas, il est fait attribution exclusive de juridiction aux tribunaux compétents de Paris.</p>
+                    <h3>Quand Consulter un ORL ?</h3>
+                    <p>Il est recommandé de consulter un ORL dans les cas suivants :</p>
+                    <ul>
+                        <li>Douleurs d'oreille ou perte d'audition</li>
+                        <li>Obstruction nasale persistante</li>
+                        <li>Maux de gorge récurrents</li>
+                        <li>Vertiges ou troubles de l'équilibre</li>
+                        <li>Modifications de la voix</li>
+                        <li>Ronflements ou apnées du sommeil</li>
+                    </ul>
+                </div>
 
-                <h2>8. Contact</h2>
-                <p>Pour toute question concernant ces mentions légales, vous pouvez nous contacter à l'adresse suivante :</p>
-                <p><strong>Email :</strong> legal@medicare.fr</p>
-                <p><strong>Adresse :</strong> 123 Rue de la Santé, 75001 Paris, France</p>
+                <div class="sidebar-card">
+                    <h3>Prendre Rendez-vous</h3>
+                    <p>Pour consulter notre ORL, prenez rendez-vous en ligne ou contactez-nous directement.</p>
+                    <a href="index.html#appointment" class="btn btn-primary" style="width: 100%; text-align: center; margin-top: 1rem;">
+                        <i class="fas fa-calendar-alt"></i> Prendre Rendez-vous
+                    </a>
+
+                    <h3 style="margin-top: 2rem;">Notre ORL</h3>
+                    <div style="text-align: center; margin: 1rem 0;">
+                        <div style="width: 80px; height: 80px; background: var(--primary-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: var(--white); font-size: 2rem;">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <h4>Dr. Marie Dubois</h4>
+                        <p style="color: var(--primary-blue); font-weight: 600;">ORL</p>
+                        <p style="font-size: 0.9rem; color: var(--text-light);">12+ ans d'expérience</p>
+                    </div>
+
+                    <h3 style="margin-top: 2rem;">Horaires de Consultation</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.5rem;"><strong>Lundi - Vendredi :</strong> 8h - 18h</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Samedi :</strong> 8h - 12h</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>Urgences :</strong> 24h/24</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </main>
@@ -346,7 +464,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h4>MediCare</h4>
-                    <p>Providing exceptional healthcare services with compassion and expertise. Your health is our priority.</p>
+                    <p>Fournir des services de santé exceptionnels avec compassion et expertise. Votre santé est notre priorité.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
@@ -371,9 +489,17 @@
                     <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
                     <p><i class="fas fa-map-marker-alt"></i> 123 Rue de la Santé, 75001 Paris</p>
                 </div>
+                <div class="footer-section">
+                    <h4>Informations Légales</h4>
+                    <ul class="footer-links">
+                        <li><a href="mentions-legales.html">Mentions Légales</a></li>
+                        <li><a href="politique-confidentialite.html">Politique de Confidentialité</a></li>
+                        <li><a href="rgpd.html">RGPD</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="footer-bottom">
-                <p>MediCare 2024. Tous droits réservés. | <a href="mentions-legales.html">Mentions Légales</a> | <a href="politique-confidentialite.html">Politique de Confidentialité</a> | <a href="rgpd.html">RGPD</a></p>
+                <p>MediCare 2024. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
