@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RGPD - Cabinet d'Ostéopathie</title>
-    <meta name="description" content="Informations RGPD du cabinet d'ostéopathie">
+    <title>RGPD - MediCare</title>
+    <meta name="description" content="Informations RGPD du cabinet médical MediCare">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,14 +16,18 @@
     
     <style>
         :root {
-            --primary-color: #4A7C59;
-            --secondary-color: #87CEEB;
-            --accent-color: #F0F8FF;
-            --text-dark: #2C3E50;
-            --text-light: #6C757D;
-            --white: #FFFFFF;
-            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            --border-radius: 12px;
+            --primary-blue: #1044d3;
+            --primary-blue-hover: #0d35a8;
+            --white: #ffffff;
+            --light-bg: #f6f9fc;
+            --text-dark: #1e1e1e;
+            --text-light: #6c757d;
+            --shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0px 15px 30px rgba(0, 0, 0, 0.12);
+            --border-radius: 16px;
+            --transition: all 0.3s ease;
+            --gradient-primary: linear-gradient(135deg, #1044d3 0%, #0d35a8 100%);
+            --gradient-secondary: linear-gradient(45deg, #f6f9fc 0%, #e8f2ff 100%);
         }
 
         * {
@@ -40,7 +44,7 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
@@ -49,284 +53,426 @@
         header {
             background: var(--white);
             box-shadow: var(--shadow);
-            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: var(--transition);
         }
 
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 1rem 0;
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: 700;
-            color: var(--primary-color);
-            text-decoration: none;
+            color: var(--primary-blue);
         }
 
-        .back-link {
-            color: var(--primary-color);
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
             text-decoration: none;
+            color: var(--text-dark);
             font-weight: 500;
+            transition: var(--transition);
+            position: relative;
         }
 
-        .back-link:hover {
-            text-decoration: underline;
+        .nav-menu a:hover {
+            color: var(--primary-blue);
         }
 
-        /* Content */
-        .content {
-            padding: 3rem 0;
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-blue);
+            transition: var(--transition);
         }
 
-        h1 {
-            color: var(--primary-color);
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 120px 0 80px;
+            background: var(--gradient-secondary);
+            min-height: 100vh;
+        }
+
+        .content-card {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+        }
+
+        .content-card h1 {
+            color: var(--primary-blue);
             font-size: 2.5rem;
+            font-weight: 700;
             margin-bottom: 2rem;
             text-align: center;
         }
 
-        h2 {
-            color: var(--text-dark);
-            font-size: 1.5rem;
+        .content-card h2 {
+            color: var(--primary-blue);
+            font-size: 1.8rem;
+            font-weight: 600;
             margin: 2rem 0 1rem 0;
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 0.5rem;
         }
 
-        h3 {
+        .content-card h3 {
             color: var(--text-dark);
-            font-size: 1.2rem;
+            font-size: 1.3rem;
+            font-weight: 600;
             margin: 1.5rem 0 0.5rem 0;
         }
 
-        p, ul, ol {
+        .content-card p {
             margin-bottom: 1rem;
             color: var(--text-light);
         }
 
-        ul, ol {
-            margin-left: 2rem;
-        }
-
-        .highlight {
-            background: var(--accent-color);
-            padding: 1rem;
-            border-radius: var(--border-radius);
-            border-left: 4px solid var(--primary-color);
+        .content-card ul {
             margin: 1rem 0;
+            padding-left: 2rem;
         }
 
-        .contact-info {
-            background: var(--accent-color);
-            padding: 1.5rem;
-            border-radius: var(--border-radius);
-            margin: 2rem 0;
-        }
-
-        .contact-info h3 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        .rights-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-
-        .right-card {
-            background: var(--white);
-            padding: 1.5rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
-            border-left: 4px solid var(--primary-color);
-        }
-
-        .right-card h4 {
-            color: var(--primary-color);
+        .content-card li {
             margin-bottom: 0.5rem;
+            color: var(--text-light);
+        }
+
+        .btn-back {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--primary-blue);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            transition: var(--transition);
+            margin-bottom: 2rem;
+        }
+
+        .btn-back:hover {
+            background: var(--primary-blue-hover);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .highlight-box {
+            background: var(--light-bg);
+            border-left: 4px solid var(--primary-blue);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+
+        .highlight-box h4 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            font-weight: 600;
         }
 
         /* Footer */
         footer {
             background: var(--text-dark);
             color: var(--white);
-            padding: 2rem 0;
-            text-align: center;
+            padding: 60px 0 20px;
         }
 
         .footer-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-bottom: 2rem;
         }
 
-        .footer-content a {
-            color: var(--primary-color);
+        .footer-section h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-section p {
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: var(--white);
             text-decoration: none;
+            opacity: 0.8;
+            transition: var(--transition);
         }
 
-        .footer-content a:hover {
-            text-decoration: underline;
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--primary-blue);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--primary-blue-hover);
+            transform: translateY(-2px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .content-card {
+                padding: 2rem;
+            }
+
+            .content-card h1 {
+                font-size: 2rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
         }
     </style>
 </head>
 <body>
     <!-- Header -->
     <header>
-        <nav class="container">
-            <a href="index.html" class="logo">
-                <i class="fas fa-bone"></i> Cabinet Ostéo
-            </a>
-            <a href="index.html" class="back-link">
-                <i class="fas fa-arrow-left"></i> Retour au site
-            </a>
-        </nav>
+        <div class="container">
+            <nav>
+                <div class="logo">MediCare</div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="index.html#about">Qui Sommes-Nous</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#doctors">Nos Médecins</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <!-- Content -->
-    <div class="content">
+    <!-- Main Content -->
+    <main class="main-content">
         <div class="container">
-            <h1>Règlement Général sur la Protection des Données (RGPD)</h1>
-
-            <div class="highlight">
-                <p><strong>Dernière mise à jour :</strong> Janvier 2024</p>
-                <p>Cette page vous informe de vos droits et de nos obligations en matière de protection des données personnelles, conformément au RGPD.</p>
-            </div>
-
-            <h2>Qu'est-ce que le RGPD ?</h2>
-            <p>Le Règlement Général sur la Protection des Données (RGPD) est un règlement européen qui renforce et unifie la protection des données personnelles des citoyens de l'Union Européenne. Il s'applique à toutes les organisations qui traitent des données personnelles.</p>
-
-            <h2>Nos engagements</h2>
-            <p>En tant que cabinet d'ostéopathie, nous nous engageons à :</p>
-            <ul>
-                <li>Traiter vos données de manière licite, loyale et transparente</li>
-                <li>Collecter vos données uniquement pour des finalités déterminées et légitimes</li>
-                <li>Limiter la collecte aux données strictement nécessaires</li>
-                <li>Assurer l'exactitude et la mise à jour de vos données</li>
-                <li>Conserver vos données pendant une durée limitée</li>
-                <li>Garantir la sécurité et la confidentialité de vos données</li>
-            </ul>
-
-            <h2>Vos droits RGPD</h2>
-            <div class="rights-grid">
-                <div class="right-card">
-                    <h4><i class="fas fa-eye"></i> Droit d'accès</h4>
-                    <p>Vous pouvez demander à connaître les données que nous détenons sur vous et comment elles sont utilisées.</p>
+            <a href="index.html" class="btn-back">
+                <i class="fas fa-arrow-left"></i> Retour à l'accueil
+            </a>
+            
+            <div class="content-card">
+                <h1>Règlement Général sur la Protection des Données (RGPD)</h1>
+                
+                <div class="highlight-box">
+                    <h4><i class="fas fa-shield-alt"></i> Protection de vos données personnelles</h4>
+                    <p>MediCare s'engage à respecter le Règlement Général sur la Protection des Données (RGPD) et à protéger vos données personnelles conformément à la législation européenne en vigueur.</p>
                 </div>
-                <div class="right-card">
-                    <h4><i class="fas fa-edit"></i> Droit de rectification</h4>
-                    <p>Vous pouvez demander la correction de vos données si elles sont inexactes ou incomplètes.</p>
+
+                <h2>1. Qu'est-ce que le RGPD ?</h2>
+                <p>Le Règlement Général sur la Protection des Données (RGPD) est un règlement européen entré en vigueur le 25 mai 2018. Il renforce et unifie la protection des données personnelles des citoyens de l'Union Européenne.</p>
+
+                <h2>2. Nos engagements RGPD</h2>
+                <h3>2.1 Transparence</h3>
+                <p>Nous vous informons clairement de :</p>
+                <ul>
+                    <li>L'identité du responsable du traitement</li>
+                    <li>Les finalités du traitement de vos données</li>
+                    <li>La base légale du traitement</li>
+                    <li>La durée de conservation des données</li>
+                    <li>Vos droits en matière de protection des données</li>
+                </ul>
+
+                <h3>2.2 Minimisation des données</h3>
+                <p>Nous ne collectons que les données strictement nécessaires à la réalisation de nos missions :</p>
+                <ul>
+                    <li>Données d'identification (nom, prénom)</li>
+                    <li>Coordonnées (email, téléphone)</li>
+                    <li>Données médicales (avec votre consentement)</li>
+                    <li>Données de navigation (cookies essentiels)</li>
+                </ul>
+
+                <h3>2.3 Sécurité des données</h3>
+                <p>Nous mettons en œuvre des mesures de sécurité appropriées :</p>
+                <ul>
+                    <li>Chiffrement des données sensibles</li>
+                    <li>Accès restreint et contrôlé</li>
+                    <li>Sauvegardes sécurisées</li>
+                    <li>Formation du personnel</li>
+                    <li>Audits de sécurité réguliers</li>
+                </ul>
+
+                <h2>3. Vos droits RGPD</h2>
+                <div class="highlight-box">
+                    <h4><i class="fas fa-user-shield"></i> Vos droits fondamentaux</h4>
+                    <p>En tant que personne concernée, vous disposez des droits suivants :</p>
                 </div>
-                <div class="right-card">
-                    <h4><i class="fas fa-trash"></i> Droit à l'effacement</h4>
-                    <p>Vous pouvez demander la suppression de vos données dans certaines conditions.</p>
+
+                <h3>3.1 Droit d'accès</h3>
+                <p>Vous pouvez demander à connaître les données personnelles que nous détenons sur vous et obtenir une copie de ces données.</p>
+
+                <h3>3.2 Droit de rectification</h3>
+                <p>Vous pouvez demander la correction de données inexactes ou incomplètes.</p>
+
+                <h3>3.3 Droit à l'effacement</h3>
+                <p>Vous pouvez demander la suppression de vos données personnelles dans certaines conditions.</p>
+
+                <h3>3.4 Droit à la portabilité</h3>
+                <p>Vous pouvez récupérer vos données dans un format structuré et les transmettre à un autre responsable de traitement.</p>
+
+                <h3>3.5 Droit d'opposition</h3>
+                <p>Vous pouvez vous opposer au traitement de vos données pour des motifs légitimes.</p>
+
+                <h3>3.6 Droit de limitation</h3>
+                <p>Vous pouvez demander la limitation du traitement de vos données dans certaines circonstances.</p>
+
+                <h2>4. Base légale du traitement</h2>
+                <p>Le traitement de vos données est fondé sur :</p>
+                <ul>
+                    <li><strong>L'exécution d'une mission d'intérêt public</strong> : soins de santé</li>
+                    <li><strong>L'obligation légale</strong> : conservation des dossiers médicaux</li>
+                    <li><strong>Votre consentement</strong> : pour les cookies non essentiels et communications marketing</li>
+                    <li><strong>L'intérêt légitime</strong> : amélioration de nos services</li>
+                </ul>
+
+                <h2>5. Durée de conservation</h2>
+                <div class="highlight-box">
+                    <h4><i class="fas fa-clock"></i> Conservation limitée dans le temps</h4>
+                    <p>Vos données sont conservées uniquement le temps nécessaire :</p>
                 </div>
-                <div class="right-card">
-                    <h4><i class="fas fa-download"></i> Droit à la portabilité</h4>
-                    <p>Vous pouvez récupérer vos données dans un format structuré et réutilisable.</p>
+                <ul>
+                    <li><strong>Dossier médical :</strong> 20 ans minimum (obligation légale)</li>
+                    <li><strong>Données de contact :</strong> 3 ans après le dernier contact</li>
+                    <li><strong>Cookies analytiques :</strong> 13 mois maximum</li>
+                    <li><strong>Données de navigation :</strong> 13 mois maximum</li>
+                </ul>
+
+                <h2>6. Transferts de données</h2>
+                <p>Vos données personnelles ne sont pas transférées en dehors de l'Union Européenne. Si un tel transfert devait être nécessaire, nous nous assurerions que le pays de destination offre un niveau de protection adéquat.</p>
+
+                <h2>7. Exercer vos droits</h2>
+                <p>Pour exercer vos droits RGPD, vous pouvez nous contacter :</p>
+                <div class="highlight-box">
+                    <h4><i class="fas fa-envelope"></i> Contact DPO</h4>
+                    <p><strong>Email :</strong> dpo@medicare.fr</p>
+                    <p><strong>Adresse :</strong> 123 Rue de la Santé, 75001 Paris, France</p>
+                    <p><strong>Téléphone :</strong> +33 1 23 45 67 89</p>
                 </div>
-                <div class="right-card">
-                    <h4><i class="fas fa-ban"></i> Droit d'opposition</h4>
-                    <p>Vous pouvez vous opposer au traitement de vos données dans certaines situations.</p>
+
+                <h2>8. Délai de réponse</h2>
+                <p>Nous nous engageons à répondre à vos demandes dans un délai maximum de :</p>
+                <ul>
+                    <li><strong>1 mois</strong> pour les demandes d'accès, de rectification, d'effacement et de portabilité</li>
+                    <li><strong>3 mois</strong> pour les demandes complexes (avec notification de prolongation)</li>
+                </ul>
+
+                <h2>9. Réclamation auprès de la CNIL</h2>
+                <p>Si vous estimez que vos droits ne sont pas respectés, vous pouvez déposer une plainte auprès de la Commission Nationale de l'Informatique et des Libertés (CNIL) :</p>
+                <div class="highlight-box">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Autorité de contrôle</h4>
+                    <p><strong>CNIL</strong><br>
+                    3 Place de Fontenoy<br>
+                    75007 Paris<br>
+                    <strong>Site web :</strong> <a href="https://www.cnil.fr" target="_blank">www.cnil.fr</a></p>
                 </div>
-                <div class="right-card">
-                    <h4><i class="fas fa-pause"></i> Droit de limitation</h4>
-                    <p>Vous pouvez demander la limitation du traitement de vos données.</p>
+
+                <h2>10. Mise à jour de cette page</h2>
+                <p>Cette page RGPD peut être mise à jour pour refléter les évolutions de notre politique de protection des données. Nous vous informerons de tout changement significatif.</p>
+
+                <div class="highlight-box">
+                    <h4><i class="fas fa-calendar-alt"></i> Dernière mise à jour</h4>
+                    <p><strong>Date :</strong> Janvier 2024</p>
+                    <p><strong>Version :</strong> 1.0</p>
                 </div>
-            </div>
-
-            <h2>Comment exercer vos droits ?</h2>
-            <p>Pour exercer vos droits RGPD, vous pouvez nous contacter :</p>
-            <div class="contact-info">
-                <h3>Cabinet d'Ostéopathie</h3>
-                <p><strong>Par email :</strong> dpo@cabinet-osteo.fr<br>
-                <strong>Par téléphone :</strong> 01 23 45 67 89<br>
-                <strong>Par courrier :</strong> 123 Rue de la Santé, 75001 Paris</p>
-            </div>
-
-            <h2>Délais de réponse</h2>
-            <p>Nous nous engageons à répondre à votre demande dans un délai maximum de :</p>
-            <ul>
-                <li><strong>1 mois</strong> pour les demandes d'accès, de rectification, d'effacement, de portabilité et d'opposition</li>
-                <li><strong>3 mois</strong> pour les demandes complexes (nous vous informerons de ce délai)</li>
-            </ul>
-
-            <h2>Données médicales</h2>
-            <p>En tant que professionnel de santé, nous traitons également des données médicales sensibles. Ces données bénéficient d'une protection renforcée :</p>
-            <ul>
-                <li>Conservation obligatoire pendant 20 ans minimum</li>
-                <li>Accès strictement limité au personnel autorisé</li>
-                <li>Chiffrement des données électroniques</li>
-                <li>Partage uniquement avec les professionnels de santé impliqués dans votre prise en charge</li>
-            </ul>
-
-            <h2>Cookies et traceurs</h2>
-            <p>Notre site utilise des cookies pour améliorer votre expérience :</p>
-            <ul>
-                <li><strong>Cookies techniques :</strong> Nécessaires au fonctionnement du site</li>
-                <li><strong>Cookies analytiques :</strong> Pour analyser l'utilisation du site</li>
-                <li><strong>Cookies de préférences :</strong> Pour mémoriser vos choix</li>
-            </ul>
-            <p>Vous pouvez gérer vos préférences cookies via la bannière qui apparaît sur notre site.</p>
-
-            <h2>Transferts de données</h2>
-            <p>Vos données ne sont pas transférées en dehors de l'Union Européenne. Tous nos prestataires sont basés en Europe et respectent le RGPD.</p>
-
-            <h2>Sécurité des données</h2>
-            <p>Nous mettons en œuvre des mesures de sécurité appropriées :</p>
-            <ul>
-                <li>Chiffrement SSL/TLS pour les données en transit</li>
-                <li>Chiffrement des données sensibles au repos</li>
-                <li>Accès restreint et authentifié</li>
-                <li>Sauvegardes sécurisées</li>
-                <li>Formation du personnel à la protection des données</li>
-            </ul>
-
-            <h2>Violation de données</h2>
-            <p>En cas de violation de données personnelles, nous nous engageons à :</p>
-            <ul>
-                <li>Notifier la CNIL dans les 72 heures</li>
-                <li>Vous informer si la violation présente un risque pour vos droits et libertés</li>
-                <li>Documenter toutes les violations et les mesures prises</li>
-            </ul>
-
-            <h2>Contact Délégué à la Protection des Données</h2>
-            <p>Pour toute question concernant la protection de vos données :</p>
-            <div class="contact-info">
-                <h3>Délégué à la Protection des Données</h3>
-                <p><strong>Email :</strong> dpo@cabinet-osteo.fr<br>
-                <strong>Adresse :</strong> 123 Rue de la Santé, 75001 Paris<br>
-                <strong>Réponse garantie sous 48h</strong></p>
-            </div>
-
-            <h2>Autorité de contrôle</h2>
-            <p>Vous avez le droit de déposer une réclamation auprès de la CNIL :</p>
-            <div class="contact-info">
-                <h3>Commission Nationale de l'Informatique et des Libertés</h3>
-                <p><strong>Adresse :</strong> 3 Place de Fontenoy, 75007 Paris<br>
-                <strong>Site web :</strong> www.cnil.fr<br>
-                <strong>Téléphone :</strong> 01 53 73 22 22</p>
-            </div>
-
-            <div class="highlight">
-                <p><strong>Note importante :</strong> Cette page est régulièrement mise à jour pour refléter les évolutions légales et nos pratiques. Nous vous informerons de tout changement significatif.</p>
             </div>
         </div>
-    </div>
+    </main>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 Cabinet d'Ostéopathie. Tous droits réservés.</p>
-            <p>
-                <a href="mentions-legales.html">Mentions légales</a> | 
-                <a href="politique-confidentialite.html">Politique de confidentialité</a> | 
-                <a href="rgpd.html">RGPD</a>
-            </p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>MediCare</h4>
+                    <p>Providing exceptional healthcare services with compassion and expertise. Your health is our priority.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens Rapides</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="index.html#about">Qui Sommes-Nous</a></li>
+                        <li><a href="index.html#services">Nos Services</a></li>
+                        <li><a href="index.html#doctors">Nos Médecins</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-envelope"></i> info@medicare.fr</p>
+                    <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Rue de la Santé, 75001 Paris</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>MediCare 2024. Tous droits réservés. | <a href="mentions-legales.html">Mentions Légales</a> | <a href="politique-confidentialite.html">Politique de Confidentialité</a> | <a href="rgpd.html">RGPD</a></p>
+            </div>
         </div>
     </footer>
 </body>
